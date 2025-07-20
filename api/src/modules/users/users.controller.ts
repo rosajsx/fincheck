@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { Controller, Get, Req } from '@nestjs/common';
 import { UsersService } from './users.service';
 
@@ -7,7 +9,6 @@ export class UsersController {
 
   @Get('/me')
   me(@Req() request: any) {
-    console.log({ userId: request.userId });
-    return this.usersService.getUserById('userId');
+    return this.usersService.getUserById(request.userId);
   }
 }
