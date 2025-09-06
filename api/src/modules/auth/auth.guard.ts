@@ -33,7 +33,7 @@ export class AuthGuard implements CanActivate {
     const token = this.extractTokenFromHeader(request);
 
     if (!token) {
-      throw new UnauthorizedException();
+      throw new UnauthorizedException('Missing access token.');
     }
 
     try {
@@ -44,7 +44,7 @@ export class AuthGuard implements CanActivate {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       request['userId'] = payload.sub;
     } catch {
-      throw new UnauthorizedException();
+      throw new UnauthorizedException('Invalid access token.');
     }
     return true;
   }
