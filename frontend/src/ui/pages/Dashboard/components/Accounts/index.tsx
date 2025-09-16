@@ -2,7 +2,7 @@ import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EyeIcon } from "../../../../components/icons/EyeIcon";
 import { AccountCard } from "./AccountCard";
-import { AccountsSliderNavigation } from "./AccountsSliderNavigation";
+import { SliderNavigation } from "./SliderNavigation";
 import { useAccountController } from "./useAccountController";
 
 export function Accounts() {
@@ -41,7 +41,7 @@ export function Accounts() {
               <strong className="text-white tracking-[-1px] text-lg font-bold">
                 Minhas contas
               </strong>
-              <AccountsSliderNavigation
+              <SliderNavigation
                 isBeginning={sliderState.isBeginning}
                 isEnd={sliderState.isEnd}
               />
