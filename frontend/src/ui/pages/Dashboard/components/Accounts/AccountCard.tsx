@@ -1,6 +1,5 @@
-import { useSwiper } from "swiper/react";
-import { formatCurrency } from "../../../../app/utils/formatCurrency";
-import { BankAccountTypeIcon } from "../../../components/icons/BankAccountTypeIcon";
+import { formatCurrency } from "../../../../../app/utils/formatCurrency";
+import { BankAccountTypeIcon } from "../../../../components/icons/BankAccountTypeIcon";
 
 interface AccountCardProps {
   color: string;
@@ -10,7 +9,6 @@ interface AccountCardProps {
 }
 
 export function AccountCard({ balance, color, name, type }: AccountCardProps) {
-  const swiper = useSwiper();
   return (
     <div
       className="flex flex-col justify-between p-4 bg-white rounded-2xl h-[200px] border-b-4 border-teal-950 "
